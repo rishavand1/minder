@@ -8,3 +8,7 @@
 [submodule "dep/RtspServer"]
 	path = dep/RtspServer
 	url = https://github.com/ZoneMinder/RtspServer
+[submodule "src"]
+    path = src
+    url = <submodule-repository-url>
+
