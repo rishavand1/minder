@@ -1,0 +1,316 @@
+/*
+ * ZoneMinder Dark Stylesheet, $Date$, $Revision$
+ * Copyright (C) 2001-2008 Philip Coombes
+ * 
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */ 
+
+/*
+ * Primary look and feel styles
+ */
+
+:root {
+  --scrollbarBG: #CFD8DC;
+  --sliderBG: #95AFC0;
+  --alarmBG: #352424;
+}
+
+body {
+    color: #dddddd;
+    background-color: #222222;
+}
+
+h1 {
+    color: #10a4e8;
+}
+
+h2 {
+    color: #10a4e8;
+}
+
+h3 {
+    color: #117AAd;
+}
+
+h4 {
+    color: #117AAd;
+}
+
+p {
+    color: #dddddd;
+}
+
+th {
+    color: #10a4e8;
+}
+
+img.normal {
+    border: #cccccc solid 1px;
+}
+
+ul.tabList li {
+    color: #8f8fc2;
+    border: #8f8fc2 solid 1px;
+    background: #444444;
+}
+
+ul.tabList li:hover {
+    background-color: #dddddd;
+}
+
+ul.tabList li.active {
+    background-color: #222222;
+    border-bottom: #8f8fc2 dotted 1px;
+}
+
+#content::backdrop {
+  background-color: black;
+}
+
+/*
+ * Major league table for multiple inputs or presentation
+ */
+
+#content table.major tr.highlight {
+    color: #eeeeee;
+    background-color: #000000;
+}
+
+#content table.major th, #content table.major td {
+    border-bottom: 2px solid #8f8fc2;
+}
+
+#content table > tbody > tr:hover
+{
+    background-color: #333333;
+}
+
+.overlay {
+    background-color: #222222;
+}
+
+.overlay .overlayHeader {
+    color: #eeeeee;
+    background-color: #070707;
+}
+
+.overlay fieldset {
+    background-color: #222222;
+}
+
+.validation-advice {
+    padding: 4px;
+    color: #dc143c;
+}
+
+fieldset {
+    border: 1px solid #dddddd;
+}
+
+/*
+ * Behavior classes
+ */
+.alarm, .errorText {
+    color: #dc143c;
+}
+
+.alert, .warnText {
+    color: #ff8c00;
+}
+
+.ok, .infoText {
+    color: #77a328;
+}
+
+.fakelink {
+    color: #8f8fc2;
+    cursor: pointer;
+}
+
+.fakelink:hover {
+    color: #336699;
+    text-decoration: none;
+}
+
+.table-tr-odd {
+    background-color: #070707;
+}
+
+.fixed-table-loading {
+  background-color: #333333 !important;
+}
+
+#header {
+    border-bottom: 1px solid #000000;
+}
+
+input, textarea, select, button, .btn-primary {
+  background-color: rgb(68,68,68);
+  border-color: var(--gray);
+  color: #dddddd;
+}
+/* PP - make it easy to identify disabled buttons */
+
+button:disabled,
+input[disabled],
+input[type=button]:disabled,
+input[type=submit]:disabled,
+.btn-primary.disabled, .btn-primary:disabled, .btn-secondary.disabled, .btn-secondary:disabled {
+  color: #888888;
+  background-color: #666666;
+  border-color: #666666;
+}
+
+.navbar {
+  margin-bottom: 0 !important;
+  border-radius: 0;
+  color: #03A9F4 !important;
+}
+
+.sidebar {
+  border-right: 1px solid #eeeeee;
+  background-color: #222222;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #eeeeee;
+}
+
+.table td, .table th, .table thead th {
+  border-color: var(--gray);
+}
+
+.table-striped > tbody > tr:nth-of-type(2n+1) {
+  background-color: #333333;
+}
+
+.table-hover > tbody > tr:hover {
+  color: orange;
+  background-color: #444444;
+}
+
+.bootstrap-table .fixed-table-container .table thead th .both {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAQAAADYWf5HAAAAkElEQVQoz7X QMQ5AQBCF4dWQSJxC5wwax1Cq1e7BAdxD5SL+Tq/QCM1oNiJidwox0355mXnG/DrEtIQ6azioNZQxI0ykPhTQIwhCR+BmBYtlK7kLJYwWCcJA9M4qdrZrd8pPjZWPtOqdRQy320YSV17OatFC4euts6z39GYMKRPCTKY9UnPQ6P+GtMRfGtPnBCiqhAeJPmkqAAAAAElFTkSuQmCC")
+}
+
+.bootstrap-table .fixed-table-container .table thead th .asc {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAACQSURBVHja7NKhDcJQFIXhVwNJE6bAMUNN3VkBiUazRxkAdZZAdYrfVeIRGFLMw7RJ02D6gIDoTX5zxadOiDGGTxW+jg0PK8eqsBbDfyp2wHpg7d/CsDZYF6yI1WCtkzCsDOvUQX1HrCwFK7GuI+yGVUzCsFZY9QjqO2Mtp2A7rBbr/qIWa/ubnc3YjP0z9hwA30ri1Ip5X+oAAAAASUVORK5CYII=")
+}
+
+.bootstrap-table .fixed-table-container .table thead th .desc {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAYAAAByUDbMAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAACUSURBVHja7NIhDsJAFIThqWkTEk5Rxxlq6uYKSHQ194ADoOYSKE4xDolH1JBiFrNNSFPRbSoIqfjNvORTDyEELBVWbMX+ArO4t9hZfI3UWTykYIXFq8Uw0s3idjIGABYri+0AelqsASAVyyyeB9jFYpaMRbC0eI/Qw+KuvyVjEWwsvi0ev/e5WG7xZHEzC/uJp/0MAFmI4tSJnjqtAAAAAElFTkSuQmCC")
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+  color: #ffa801;
+  background-color: #333333;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: #444444;
+}
+
+/* Override chosen for dark theme */
+.chosen-single,
+.chosen-container,
+.chosen-container-multi,
+.chosen-results,
+.chosen-search,
+.chosen-drop,
+.chosen-choices,
+li.search-choice {
+    font-size: inherit !important;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(20%,#555),color-stop(50%,#464646),color-stop(52%,#444),to(#545454)) !important;
+    background: linear-gradient(#555 20%,#464646 50%,#444 52%,#545454 100%) !important;
+    background-color: #444444 !important;
+    color: #eee !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+}
+
+.chosen-container-multi .chosen-choices {
+  border-color: var(--gray);
+}
+
+.chosen-container-active .chosen-choices {
+  border-color: var(--gray);
+}
+
+.chosen-container .chosen-results li.highlighted {
+  background-color: #222222;
+  background-image: none;
+  color: #fff;
+}
+
+.chosen-container-active .chosen-choices li.search-field input[type=text] {
+  color: inherit !important;
+}
+/* end chosen override */
+
+.modal-content {
+    background-color: #222222;
+}
+
+ul.nav.nav-pills.flex-column {
+    background-color:  #485460; 
+}
+
+.thead-highlight {
+    background-color:#485460;
+}
+
+.tag {
+  background-color: #444444;
+}
+
+.tag-dropdown-content {
+  background-color: #333333;
+}
+
+.tag-dropdown-item:hover {
+  background-color: #222222;
+}
+
+.hlight{
+  background:#444444;
+}
+
+.monitor .monitorStatus {
+  background-color: #222222;
+}
+
+/* Change scrollbar style */
+::-webkit-scrollbar, div::-webkit-scrollbar, nav::-webkit-scrollbar, .chosen-results::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+html, body, div, nav, .chosen-results {
+  scrollbar-width: thin;
+  scrollbar-color: var(--sliderBG) var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-track, div::-webkit-scrollbar-track, nav::-webkit-scrollbar-track, .chosen-results::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+::-webkit-scrollbar-thumb, div::-webkit-scrollbar-thumb, nav::-webkit-scrollbar-thumb, .chosen-results::-webkit-scrollbar-thumb {
+  background-color: var(--sliderBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}

@@ -1,0 +1,162 @@
+#systemTime {
+    float: left;
+}
+
+#title {
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+}
+
+#systemStats {
+    float: right;
+}
+
+#systemStats .warning {
+    color: orange;
+}
+
+#systemStats .error {
+    color: red;
+}
+
+#systemStats .critical {
+    color: red;
+    text-decoration: blink;
+}
+
+#monitorSummary {
+    float: left;
+    text-align: left;
+    width: 20%;
+}
+
+#devices {
+    float: left;
+}
+
+#loginBandwidth {
+    margin: 0 auto;
+    text-align: center;
+    width: 40%;
+}
+
+#cycleMontage {
+    float: right;
+}
+
+#options {
+    float: right;
+    text-align: right;
+    width: 20%;
+}
+
+.consoleTable {
+    width: 100%;
+}
+
+.consoleTable tr.highlight {
+    background-color: #eeeeee;
+}
+
+.consoleTable thead th {
+    padding-bottom: 4px;
+    vertical-align: middle;
+}
+
+.consoleTable tfoot td {
+    padding-top: 4px;
+    vertical-align: middle;
+}
+
+.consoleTable th,td {
+    text-align: left;
+}
+
+.consoleTable .colMark {
+    width: 32px;
+    text-align: center;
+}
+
+.consoleTable .colEvents {
+    text-align: right;
+}
+
+.consoleTable .colZones {
+    text-align: right;
+}
+.consoleTable .colFunction {
+    width: 120px;
+    text-align: center;
+}
+
+.consoleTable .colLeftButtons {
+    text-align: left;
+}
+.FunctionFilter select {
+  min-width: 90px;
+}
+.StatusFilter select {
+  min-width: 130px;
+}
+#FunctionFunction {
+  margin-bottom: 2rem;
+}
+
+/* .MonitorNameFilter,
+.FunctionFilter,
+.StatusFilter,
+.SourceFilter,
+.MonitorFilter {
+  display: inline-block;
+} */
+form[name="monitorForm"] {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  flex: 1 1 auto;
+}
+#monitorList {
+  flex: 1 1 auto;
+/*  overflow-y: scroll; */
+}
+body.sticky #monitorList {
+  overflow: auto; 
+}
+body.sticky #monitorList thead {
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0px 0, 0 -3px 0 #dfe4ea;
+}
+#toolbar,
+#contentButtons {
+  float: none;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.rightButtons {
+  margin-left: auto;
+}
+.statusBreakdown {
+  margin-right: auto;
+}
+
+@media screen and (max-width:1280px) {
+}
+@media screen and (max-width:900px) {
+  #header {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width:564px) {
+  button .text {
+    display: none;
+  }
+  #contentButtons {
+    padding: 0;
+  }
+  button .material-icons {
+    font-size: 16px;
+  }
+}

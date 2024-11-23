@@ -1,0 +1,27 @@
+#contentTable + input {
+    margin-top: 6px;
+}
+
+#videoProgress {
+    margin: 8px auto 4px;
+}
+
+#videoFilesHeader {
+    margin: 8px auto 4px;
+}
+
+#videoNoFiles {
+    margin: 4px auto;
+}
+
+#videoFile {
+    margin-bottom: 6px;
+}
+
+video[poster]{
+    object-fit: fill;
+}
+
+#videoobj {
+  margin: 0 auto;
+}
