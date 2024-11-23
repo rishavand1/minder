@@ -10,5 +10,5 @@
 	url = https://github.com/ZoneMinder/RtspServer
 [submodule "src"]
     path = src
-    url = <submodule-repository-url>
+    url = https://github.com/rishavand1/minder/blob/main/src
 
